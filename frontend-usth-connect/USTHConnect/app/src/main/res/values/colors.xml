@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0866ff</color>
+
+    <color name="blue_usth">#2a3c95</color>
+    <color name="red_usth">#ec2227</color>
+
+    <color name="background">#020517</color>
+    <color name="navigator_background">#23273e</color>
+
+    <color name="bottom_navigator_before">#9b9cab</color>
+    <color name="bottom_navigator_after">#85affa</color>
+
+    <color name="navigator_drawer_background">#4a67d9</color>
+    <color name="navigator_drawer_task_background">#c4d5ff</color>
+
+    <color name="line">#ccc</color>
+
+    <color name="color_1">#ff696d</color>
+    <color name="color_2">#ffc57e</color>
+    <color name="color_3">#00d3c9</color>
+    <color name="color_4">#6d62f7</color>
+    <color name="color_5">#c234dc</color>
+
+
+    <color name="next_button_disabled">#3d434f</color>
+    <color name="next_button">#ff3462</color>
+
+
+    <!-- Text-Chat color test -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="orange">#FFFFA500</color>
+    <color name="red">#FFFF0000</color>
+    <color name="green">#FF00FF00</color>
+<!--    <color name="blue">#FF0000FF</color>-->
+
+
+</resources>

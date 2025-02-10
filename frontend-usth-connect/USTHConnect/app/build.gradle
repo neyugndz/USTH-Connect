@@ -1,0 +1,75 @@
+plugins {
+    alias(libs.plugins.android.application)
+}
+
+android {
+    namespace 'vn.edu.usth.connect'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "vn.edu.usth.connect"
+        minSdk 27
+        targetSdk 34
+        versionCode 600000
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // Resolve conflict for libc++_shared.so
+    packagingOptions {
+        pickFirst 'lib/arm64-v8a/libc++_shared.so'
+        pickFirst 'lib/armeabi-v7a/libc++_shared.so'
+        pickFirst 'lib/x86/libc++_shared.so'
+        pickFirst 'lib/x86_64/libc++_shared.so'
+    }
+}
+
+dependencies {
+
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    implementation libs.retrofit2.retrofit
+    implementation libs.retrofit2.converter
+    implementation libs.room.runtime
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.work.runtime
+    implementation libs.jackson.databind
+
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+
+    // Image Lib
+    implementation libs.glide
+    annotationProcessor libs.compiler
+
+    // Flexbox for Study Buddy
+    implementation libs.flexbox
+
+    // Media
+    implementation libs.androidx.media.v120
+    implementation 'com.google.code.gson:gson:2.8.9'
+
+    // Linphone :)?
+    implementation libs.material.v190
+    implementation 'org.linphone:linphone-sdk-android:5.0+'
+
+    // Mapbox
+    implementation libs.android
+
+    // PhotoView
+    implementation libs.photoview
+}

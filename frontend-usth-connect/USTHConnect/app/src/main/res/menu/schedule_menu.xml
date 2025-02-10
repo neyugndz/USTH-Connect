@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/calender_page" android:title="Timetable" android:icon="@drawable/calender"/>
+    <item android:id="@+id/favorite_page" android:title="Favorite" android:icon="@drawable/fav"/>
+    <item android:id="@+id/course_page" android:title="Courses" android:icon="@drawable/resource"/>
+
+</menu>

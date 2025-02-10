@@ -1,0 +1,70 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">USTH Connect</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="back"><![CDATA[<-]]></string>
+    <string name="forward"><![CDATA[->]]></string>
+
+    <string-array name="major">
+        <item>ICT</item>
+        <item>DS</item>
+        <item>CS</item>
+        <item>BIT</item>
+        <item>FST</item>
+        <item>MST</item>
+        <item>Pharmacy</item>
+        <item>AMS</item>
+        <item>AES</item>
+        <item>SST</item>
+        <item>EER</item>
+        <item>SIC</item>
+        <item>CH</item>
+        <item>MAT</item>
+        <item>MET</item>
+        <item>ATE</item>
+        <item>AE</item>
+    </string-array>
+
+    <string-array name="personality">
+        <item>INTJ</item>
+        <item>INTP</item>
+        <item>ENTJ</item>
+        <item>ENTP</item>
+        <item>INFJ</item>
+        <item>INFP</item>
+        <item>ENFJ</item>
+        <item>ENFP</item>
+        <item>ISTJ</item>
+        <item>ISFJ</item>
+        <item>ESTJ</item>
+        <item>ESFJ</item>
+        <item>ISTP</item>
+        <item>ISFP</item>
+        <item>ESTP</item>
+        <item>ESFP</item>
+    </string-array>
+
+    <string-array name="location_study">
+        <item>Café</item>
+        <item>Home</item>
+        <item>Library</item>
+        <item>Bookstore</item>
+        <item>Online</item>
+    </string-array>
+
+    <string-array name="time_study">
+        <item>Early Morning</item>
+        <item>Midday</item>
+        <item>Evening</item>
+        <item>Night</item>
+        <item>Midnight</item>
+        <item>Overnight</item>
+    </string-array>
+
+    <string name="prompt_major">Select a major</string>
+    <string name="prompt_personality">Select your personality</string>
+    <string name="prompt_study_location">Select your favourite location for study</string>
+    <string name="prompt_study_time">Select your favourite time to study</string>
+    <string name="mapbox_access_token" translatable="false" tools:ignore="UnusedResources">pk.eyJ1IjoiZGFuZ25ndXllbjE4MDkiLCJhIjoiY201NHNhdGduMzNwMzJscTdyZnA2MTZqZiJ9.-RiHExcl7sdkjhxzbWb_VA</string>
+</resources>
