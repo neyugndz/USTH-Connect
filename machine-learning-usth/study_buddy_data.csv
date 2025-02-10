@@ -1,0 +1,144 @@
+student_id,FullName,Gender,Major,Personality,Communication_Style,Looking_for,Favorite_Subject,Interests,Study_Location,Study_Time
+22BI13002,Lê Đức An,Male,AE,ISTJ,Phone call,Share knowledge,"Artificial Intelligence, Chemistry, Environment, Physics","Basketball, Board games, Bowling, Skiing, Table tennis",BookStore,Overnight
+22BI13010,Bùi Lê Đức Anh,Male,ICT-DD,ENTP,Phone call,Study supporter,"Chemistry, Physics, Programming","Basketball, K-pop, Movie, Swimming, V-pop","Home, Library",Midday
+22BI13014,Dương Đăng Duy Anh,Male,AE,ESTJ,Video call,Chit Chatting,"Chemistry, Health Care, Programming","Baseball, Coffee, Gym, Politics, Vlogging","Café, Library",Evening
+22BI13020,Nguyễn Chí Nhật Anh,Female,BIT-DD,INFP,Text message,Study supporter,"Biology, Calculus, Environment","Basketball, Dancing, Movie, Singing, Yoga","BookStore, Online",Night
+22BI13021,xoai,Male,ICT,INFJ,Text message,Chit Chatting,"Calculus, Practical laboratory, Programming","Coffee, Investment, Rap","BookStore, Library",Night
+22BI13026,Nguyễn Minh Anh,Female,SST,ISFP,In-person (face-to-face),Share knowledge,"Health Care, Linear Algebra, Practical laboratory","Cooking, Food tour, Skateboarding, Table tennis, Travel","Café, Library",Early Morning
+22BI13027,Nguyễn Quế Anh,Female,BIT,ENTJ,Phone call,Chit Chatting,"Biology, Chemistry, Physics","Gym, Jogging, Movie, Rap, Skiing","Home, Library",Midday
+22BI13028,Nguyễn Tài Anh,Male,CS,INTP,Text message,Study supporter,"Artificial Intelligence, Electronic, Programming","Badminton, Coffee, Movie, Painting, Yoga","BookStore, Online",Night
+22BI13031,Nguyễn Tuấn Anh,Male,MAT,ISFJ,Video call,Share knowledge,"Calculus, Physics, Programming","Basketball, Bowling, Cooking, DIY, Travel","Home, Library",Evening
+22BI13033,Nhữ Quang Anh,Male,MET,ENFP,In-person (face-to-face),Chit Chatting,"Biology, Chemistry, Practical laboratory","Dancing, Food tour, Painting, Singing, Skateboarding","BookStore, Online",Midnight
+22BI13036,Phạm Minh Anh,Female,CH-DD,INFP,Phone call,Study supporter,"Biology, Calculus, Chemistry","Art, Basketball, Singing, Swimming, Yoga","Library, Online",Midday
+22BI13038,Phạm Quốc Anh,Male,AE,ESTJ,Text message,Share knowledge,"Health Care, Practical laboratory, Programming","Baseball, Movie, Rap, Singing, Yoga","Café, Library",Night
+22BI13041,Trần Quang Anh,Male,SST,ISFJ,In-person (face-to-face),Share knowledge,"Chemistry, Physics, Practical laboratory","DIY, Food tour, Table tennis, Travel","Café, Library",Early Morning
+22BI13044,Trương Quốc Anh,Male,BIT,ENTP,Phone call,Chit Chatting,"Calculus, Chemistry, Programming","Jogging, Movie, Skiing, Swimming, V-pop","Home, Library",Midday
+22BI13046,Vũ Huyền Anh,Female,AES,INFP,Text message,Study supporter,"Biology, Calculus, Health Care","Art, Dancing, Singing, Skateboarding, Yoga","BookStore, Online",Night
+22BI13051,Lê Hoàng Gia Bách,Male,BIT-DD,ESTJ,Video call,Share knowledge,"Chemistry, Health Care, Physics","Baseball, Coffee, Gym, Politics, Vlogging","Café, Library",Evening
+22BI13053,Nguyễn Quang Bách,Male,CS,INTP,Text message,Study supporter,"Artificial Intelligence, Physics, Programming","Badminton, Coffee, Movie, Painting, Yoga","BookStore, Online",Night
+22BI13056,Vũ Trọng Bách,Male,CS,ENTP,Phone call,Study supporter,"Chemistry, Physics, Programming","Basketball, K-pop, Movie, Swimming, Travel","Home, Library",Midday
+22BI13061,Nguyễn Minh Châu,Female,BIT,ISFP,In-person (face-to-face),Share knowledge,"Environment, Linear Algebra, Practical laboratory","Art, Cooking, Dancing, Food tour, Skateboarding","Café, Library",Early Morning
+22BI13062,Phạm Hoàng Bảo Châu,Female,BIT,ENTJ,Video call,Chit Chatting,"Calculus, Chemistry, Programming","Cooking, Gym, Swimming, Travel, V-pop","Café, Library",Evening
+22BI13064,Trần Khánh Chi,Female,MST,INFP,Text message,Study supporter,"Biology, Chemistry, Environment","Art, Badminton, Dancing, Movie, Yoga","BookStore, Online",Night
+22BI13072,Nguyễn Đình Hải Đăng,Male,BIT-DD,ESTJ,Phone call,Share knowledge,"Chemistry, Physics, Programming","Cooking, DIY, Movie, Travel, V-pop","Home, Library",Midday
+22BI13075,Đỗ Trọng Đạt,Male,CS,INTJ,Text message,Study supporter,"Artificial Intelligence, Calculus, Physics","Anime, Badminton, Cooking, Gym","Café, Online",Evening
+22BI13078,Nguyễn Tiến Đạt,Male,AMS,ENTP,Video call,Chit Chatting,"Chemistry, Environment, Programming","Basketball, DIY, Esport, Movie, Skiing","Home, Library",Midday
+22BI13082,Tạ Quốc Đạt,Male,BIT,ESTJ,In-person (face-to-face),Share knowledge,"Linear Algebra, Physics, Practical laboratory","Badminton, Coffee, Table tennis, Travel","Café, Library",Early Morning
+22BI13083,Vũ Gia Đạt,Male,SST,ISFJ,Phone call,Study supporter,"Biology, Chemistry, Health Care","Anime, Art, Badminton, Bowling, Movie","BookStore, Online",Night
+22BI13087,Đinh Nguyễn Minh Đức,Male,CH-DD,ENTJ,Video call,Chit Chatting,"Chemistry, Physics, Programming","Cooking, Gym, K-pop, Politics, Vlogging","Café, Library",Evening
+22BI13090,Nguyễn Minh Đức,Male,AE,INFJ,In-person (face-to-face),Study supporter,"Environment, Health Care, Linear Algebra","Badminton, Food tour, Netflix, Singing, Travel","Home, Library",Midday
+22BI13100,Vũ Minh Đức,Male,ATE,INTP,Text message,Share knowledge,"Artificial Intelligence, Calculus, Physics","Anime, Cooking, DIY, Esport, Swimming","BookStore, Online",Night
+22BI13102,Đinh Quang Dũng,Male,CS,ENFP,Video call,Chit Chatting,"Biology, Physics, Programming","Anime, Basketball, Cooking, K-pop, Movie","Home, Library",Midday
+22BI13108,Bùi Đắc Dương,Male,CH,ISFJ,In-person (face-to-face),Share knowledge,"Chemistry, Physics, Practical laboratory","Art, Cooking, Table tennis, Travel","Café, Library",Early Morning
+22BI13110,Hoàng Thái Dương,Male,MET,ENTP,Phone call,Chit Chatting,"Environment, Linear Algebra","Coffee, Football, Netflix, Swimming","Home, Library",Midday
+22BI13111,Lê Phú Dương,Male,AE,INTP,Video call,Study supporter,"Calculus, Physics","Badminton, DIY, Gym, V-pop","BookStore, Online",Night
+22BI13112,Nguyễn Bá Hải Dương,Male,AES,ENFP,Text message,Share knowledge,"Biology, Health Care","Cooking, Hiphop, Rap, Travel","Café, Online",Evening
+22BI13113,Nguyễn Đình Dương,Male,AMS,ESTJ,In-person (face-to-face),Chit Chatting,"Physics, Programming","Anime, Basketball, Movie, Travel","Home, Library",Midday
+22BI13119,Lê Đình Duy,Male,MST,ISFP,Text message,Study supporter,"Environment, Physics","Art, Bowling, Singing, Swimming","BookStore, Library",Early Morning
+22BI13121,Nguyễn Đức Anh Duy,Male,BIT,ENTJ,Phone call,Chit Chatting,"Physics, Programming","Anime, Movie, Table tennis, Vlogging","Café, Home",Evening
+22BI13125,Phạm Đức Duy,Male,ATE,INTJ,Video call,Share knowledge,"Calculus, Electronic, Physics","Coffee, DIY, Football, Travel","BookStore, Library",Night
+22BI13129,Trần An Duyên,Female,BIT,ESFP,In-person (face-to-face),Study supporter,"Calculus, Linear Algebra","Coffee, Dancing, Food tour, K-pop","Café, Library",Early Morning
+22BI13131,Nguyễn Trường Giang,Male,SST,INTP,Text message,Chit Chatting,"Chemistry, Physics, Programming","Esport, K-pop, Table tennis, Travel","Home, Online",Evening
+22BI13133,Quách Hương Giang,Female,MST,ISFJ,Text message,Study supporter,"Biology, Calculus",Art,"Home, Library",Evening
+22BI13135,Phan Thanh Giáp,Male,MET,ESTP,In-person (face-to-face),Chit Chatting,"Environment, Programming",Football,"Café, Library",Night
+22BI13137,Công Thị Thu Hà,Female,BIT-DD,ENFP,Phone call,Study supporter,"Health Care, Linear Algebra","Cooking, Travel","Café, Home",Midday
+22BI13138,Lê Mạnh Hà,Male,AES,INTP,Text message,Share knowledge,"Biology, Environment",Cooking,"BookStore, Library",Evening
+22BI13139,Lê Vũ Minh Hà,Male,BIT,INTJ,Video call,Chit Chatting,"Physics, Programming",Anime,"Home, Online",Night
+22BI13140,Lương Quảng Hà,Male,BIT,ISTJ,In-person (face-to-face),Study supporter,"Calculus, Programming",Anime,"Home, Library",Midday
+22BI13141,Nguyễn Quang Hà,Male,BIT-DD,ENTP,Text message,Chit Chatting,"Linear Algebra, Programming","Alcoholic, Football","Café, Online",Early Morning
+22BI13143,Phạm Nhật Hà,Male,BIT,ESFP,Phone call,Study supporter,"Physics, Programming","Football, Travel","BookStore, Library",Evening
+22BI13145,Trần Quang Hà,Male,ICT-DD,ENTJ,In-person (face-to-face),Chit Chatting,"Artificial Intelligence, Programming","Esport, Movie","Café, Home",Night
+22BI13151,Ngô Nhật Hào,Male,ATE,ISTP,Text message,Study supporter,"Environment, Health Care","Anime, Esport, Movie","Library, Online",Midday
+22BI13152,Nguyễn Lê Thanh Hiền,Female,BIT-DD,INFP,Phone call,Study supporter,"Calculus, Programming","Cooking, Dancing, Travel","Café, Library",Early Morning
+22BI13153,Bùi Minh Hiển,Male,AE,ESTJ,Text message,Study supporter,"Physics, Programming","Esport, Football","Café, Online",Night
+22BI13156,Ngô Hoàng Hiệp,Male,ATE,ISFP,In-person (face-to-face),Chit Chatting,"Calculus, Physics","Basketball, Travel","Café, Library",Evening
+22BI13157,Nguyễn Đức Hiệp,Male,MAT,ENTP,Phone call,Study supporter,"Linear Algebra, Programming","Cooking, Football","Home, Library",Early Morning
+22BI13159,Bùi Gia Hiếu,Male,AE,INFJ,Text message,Chit Chatting,"Biology, Physics","Skiing, Swimming","Café, Library",Evening
+22BI13162,Trần Trung Hiếu,Male,CS,INTP,In-person (face-to-face),Chit Chatting,"Calculus, Programming","Anime, Esport","Café, Home",Midday
+22BI13164,Vương Cát Hồng Hiếu,Male,MET,ESFP,Text message,Study supporter,"Health Care, Programming","Cooking, Football","Café, Library",Early Morning
+22BI13165,Dương Quỳnh Hoa,Female,BIT-DD,INFJ,Phone call,Chit Chatting,"Biology, Calculus","Painting, Yoga","Café, Home",Early Morning
+22BI13169,Đào Huy Hoàng,Male,MET,ENTJ,Text message,Study supporter,"Linear Algebra, Programming","Basketball, Football","Café, Home",Midday
+22BI13174,Nguyễn Văn Hoàng,Male,CS,ISTJ,In-person (face-to-face),Chit Chatting,"Calculus, Programming","Esport, Football","Café, Library",Night
+22BI13175,Phạm Xuân Hoàng,Male,ICT-DD,ENTP,Text message,Chit Chatting,"Artificial Intelligence, Physics","Anime, Esport","Café, Library",Night
+22BI13176,Trần Huy Hoàng,Male,SST,INFP,In-person (face-to-face),Study supporter,"Biology, Physics","Football, Skiing","Home, Library",Midday
+22BI13178,Nguyễn Hà Hùng,Male,ATE,ESFP,Text message,Chit Chatting,"Calculus, Physics","Basketball, Skateboarding","Home, Library",Evening
+22BI13179,Tăng Minh Hùng,Male,BIT,ENTJ,In-person (face-to-face),Study supporter,"Physics, Programming","Cooking, Football","Café, Home",Early Morning
+22BI13182,Đỗ Gia Hưng,Male,AES,INFP,Phone call,Chit Chatting,"Health Care, Physics","Football, Yoga","Café, Library",Midday
+22BI13185,Phạm Hồng Hưng,Male,MST,INTP,Text message,Study supporter,"Calculus, Physics","Esport, Football","Home, Library",Evening
+22BI13187,Trần Gia Hưng,Male,AE,ENFP,In-person (face-to-face),Chit Chatting,"Calculus, Physics","Basketball, Swimming","Café, Library",Midday
+22BI13188,Bùi Quang Huy,Male,CS,ISTP,Text message,Chit Chatting,"Artificial Intelligence, Programming","Esport, K-pop","Home, Online",Night
+22BI13189,Đinh Phương Huy,Male,MET,ESTJ,Phone call,Study supporter,"Health Care, Physics","Football, Movie","Café, Library",Evening
+22BI13190,Lê Quang Huy,Male,CS,INFJ,Text message,Study supporter,"Calculus, Programming","Anime, K-pop","Café, Home",Midday
+22BI13194,Nguyễn Quang Huy,Male,CH-DD,ENTP,In-person (face-to-face),Chit Chatting,"Calculus, Physics","Football, Movie","Café, Library",Night
+22BI13198,Trần Việt Huy,Male,AE,ISTJ,In-person (face-to-face),Study supporter,"Physics, Programming","Basketball, Esport","Café, Library",Midday
+22BI13203,Nghiêm Tuấn Khang,Male,AMS,ESTP,Text message,Chit Chatting,"Health Care, Programming","Cooking, Esport","Café, Library",Night
+22BI13204,Nguyễn Gia Khang,Male,BIT,ENFP,In-person (face-to-face),Study supporter,"Calculus, Programming","Esport, Travel","Café, Home",Evening
+22BI13205,Nguyễn Ngọc Khang,Male,MET,INFJ,Phone call,Chit Chatting,"Physics, Programming","Anime, Movie","Home, Library",Midday
+22BI13207,Đinh Tiến Khánh,Male,MET,INTP,Text message,Study supporter,"Calculus, Linear Algebra","EDM, Football","Café, Library",Evening
+22BI13209,Nguyễn Nam Khánh,Male,MST,ENFP,In-person (face-to-face),Study supporter,"Calculus, Physics","Esport, Football","Café, Library",Midday
+22BI13212,Nguyễn Tiến Khánh,Male,MET,ESTJ,Phone call,Chit Chatting,"Health Care, Linear Algebra","Basketball, Travel","Home, Library",Night
+22BI13214,Lê Gia Khiêm,Male,AMS,ISTP,Text message,Study supporter,"Calculus, Programming","Art, EDM","Café, Online",Early Morning
+22BI13215,Ngô Nam Khoa,Male,AE,ENTP,In-person (face-to-face),Chit Chatting,"Calculus, Physics","Esport, Football","Café, Library",Midday
+22BI13217,Lê Anh Khôi,Male,MET,INTJ,Phone call,Study supporter,"Biology, Linear Algebra","Anime, Football","Café, Home",Evening
+22BI13223,Cao Trung Kiên,Male,BIT,ESTP,Text message,Study supporter,"Physics, Programming","Esport, Travel","Café, Library",Night
+22BI13228,Vũ Trần Kiên,Male,MET,ISTJ,In-person (face-to-face),Study supporter,"Calculus, Linear Algebra","Basketball, Football","Café, Library",Midday
+22BI13232,Hoàng Lân Kiệt,Male,BIT,INFP,Text message,Chit Chatting,"Health Care, Programming","Football, Movie","Home, Library",Night
+22BI13236,Ngô Lâm,Male,AE,INTP,Text message,Study supporter,"Calculus, Physics","Esport, Football","Home, Library",Evening
+22BI13237,Nguyễn Hải Lâm,Male,AES,ENFP,In-person (face-to-face),Chit Chatting,"Calculus, Physics","Basketball, Swimming","Café, Library",Midday
+22BI13238,Nguyễn Nhật Lâm,Male,AE,ESTJ,Phone call,Study supporter,"Health Care, Physics","Football, Movie","Café, Library",Evening
+22BI13239,Phạm Đức Lâm,Male,BIT,INFJ,Text message,Chit Chatting,"Calculus, Programming","Anime, K-pop","Café, Home",Midday
+22BI13245,Giang Phương Lê,Male,AMS,ENTP,In-person (face-to-face),Study supporter,"Calculus, Physics","Esport, Football","Café, Library",Midday
+22BI13247,Lê Trang Linh,Female,BIT,ISFJ,Phone call,Chit Chatting,"Health Care, Linear Algebra","Basketball, Esport","Café, Home",Midday
+22BI13248,Nguyễn Hà Linh,Female,BIT,ESTP,Text message,Study supporter,"Physics, Programming","Esport, Travel","Home, Library",Night
+22BI13249,Nguyễn Khánh Linh,Female,MST,INFP,In-person (face-to-face),Chit Chatting,"Calculus, Physics","Football, K-pop","Café, Library",Evening
+22BI13251,Nguyễn Tú Linh,Male,ICT-DD,ISTJ,Phone call,Study supporter,"Linear Algebra, Programming","Anime, V-pop","Home, Library",Early Morning
+22BI13253,Trịnh Khánh Linh,Female,BIT-DD,ENFP,Text message,Chit Chatting,"Health Care, Physics","Basketball, Football","Café, Library",Midday
+22BI13255,Trương Nguyễn Hương Linh,Female,BIT,ISTP,In-person (face-to-face),Study supporter,"Calculus, Programming","Esport, Travel","Café, Library",Midday
+22BI13257,Trần Sỹ Lợi,Male,AE,ESTJ,Text message,Study supporter,"Health Care, Physics","Football, Movie","Café, Library",Evening
+22BI13258,Đào Việt Long,Male,ICT-DD,INFJ,Phone call,Chit Chatting,"Physics, Programming","V-pop, Vlogging","Home, Library",Night
+22BI13263,Nguyễn Hải Long,Male,ATE,ESTP,Text message,Chit Chatting,"Calculus, Health Care","Basketball, Football","Café, Library",Midday
+22BI13265,Phạm Huy Long,Male,AMS,ENFP,In-person (face-to-face),Study supporter,"Health Care, Physics","Esport, Football","Café, Library",Midday
+22BI13266,Tống Nam Long,Male,MET,INTJ,Phone call,Chit Chatting,"Biology, Linear Algebra","Anime, Football","Home, Library",Evening
+22BI13267,Trần Mạnh Long,Male,CS,INTP,Text message,Study supporter,"Physics, Programming","Anime, Football","Café, Home",Evening
+22BI13271,Nguyễn Phạm Ngọc Mai,Female,BIT,ISFJ,Phone call,Chit Chatting,"Biology, Calculus","Korean food, Swimming","Home, Library",Midday
+22BI13272,Phạm Chi Mai,Female,BIT,ENFP,In-person (face-to-face),Study supporter,"Biology, Programming","Travel, Vlogging","Café, Home",Early Morning
+22BI13275,Bùi Thái Hoàng Minh,Male,ICT-DD,ENTP,Text message,Chit Chatting,"Artificial Intelligence, Programming","Esport, V-pop","Café, Library",Night
+22BI13283,Hoàng Đức Minh,Male,MST,ESTP,Phone call,Study supporter,"Environment, Physics","Football, Travel","Café, Library",Midday
+22BI13284,Lê Gia Minh,Male,MST,INTJ,In-person (face-to-face),Study supporter,"Calculus, Chemistry","Basketball, Movie","Café, Library",Early Morning
+22BI13285,Lê Ngọc Minh,Female,AES,INFJ,Phone call,Chit Chatting,"Biology, Health Care","Cooking, Makeup","Café, Home",Night
+22BI13286,Lê Quang Minh,Male,CS,ISTJ,Text message,Study supporter,"Physics, Programming","Esport, Netflix","Home, Library",Evening
+22BI13287,Lưu Nguyên Tuệ Minh,Female,BIT-DD,ENFJ,In-person (face-to-face),Chit Chatting,"Linear Algebra, Practical laboratory","Badminton, K-pop","Café, Home",Midday
+22BI13289,Ngô Quang Minh,Male,MET,ENTP,Phone call,Study supporter,"Calculus, Physics","Badminton, Football","Café, Library",Early Morning
+22BI13340,Nguyễn Đăng Nguyên,Male,ICT,ISFJ,Video call,Share knowledge,"Chemistry, Physics, Practical laboratory, Programming","Anime, Bowling, Dancing, DIY, Skiing",Home,Midnight
+22BI13341,Nguyễn Khôi Nguyên,Male,ICT,ISFP,Text message,Study supporter,"Environment, Health Care, Practical laboratory","Anime, Bowling, Hiphop, Korean food",Home,Early Morning
+22BI13390,Phạm Phú Sĩ,Male,ICT,ENTP,Phone call,Study supporter,"Physics, Programming","Badminton, Football","Café, Library",Early Morning
+22BI13391,Bùi Khải Sơn,Male,MAT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13393,Đỗ Hoàng Sơn,Male,ICT,ENTP,Phone call,Study supporter,"Physics, Programming","Esport, Football","Café, Library",Midday
+22BI13394,Hoàng Trung Sơn,Male,ICT,ENTP,Phone call,Study supporter,"Physics, Programming","Basketball, Football","Café, Library",Midnight
+22BI13395,Lê Anh Sơn,Male,AE,ENTP,Phone call,Study supporter,"Calculus, Physics","Badminton, Football","Café, Library",Night
+22BI13396,Nguyễn Thái Sơn,Male,BIT-DD,ENTP,Phone call,Study supporter,"Physics, Programming","Basketball, Football","Café, Library",Early Morning
+22BI13398,Nguyễn Anh Tài,Male,ATE,ENTP,Phone call,Study supporter,"Calculus, Physics","Esport, Football","Café, Library",Midday
+22BI13400,Nguyễn Đức Tâm,Male,ICT,ENTP,Phone call,Study supporter,"Physics, Programming","Esport, Football","Café, Library",Midday
+22BI13402,Trần Quốc Thái,Male,ATE,ENTP,Phone call,Study supporter,"Calculus, Physics","Badminton, Football","Café, Library",Midnight
+22BI13403,Chu Xuân Thăng,Male,ICT-DD,ENTP,Phone call,Study supporter,"Physics, Programming","Basketball, Football","Café, Library",Night
+22BI13404,Trần Thọ Thăng,Male,ICT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13405,Bùi Việt Thành,Male,AE,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13406,Đặng Trần Trung Thành,Male,ICT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13407,Hoàng Kim Thành,Male,ICT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13408,Nguyễn Hữu Thành,Male,BIT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13409,Nguyễn Minh Thành,Male,AE,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13410,Nguyễn Quốc Thành,Male,ICT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13411,Tống Vũ Tuấn Thành,Male,ATE,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13412,Trần Minh Thành,Male,ICT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13414,Nguyễn Phương Thảo,Female,MST,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13415,Nguyễn Thị Phương Thảo,Female,BIT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13416,Đào Đình Thiện,Male,AE,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13417,Đào Hạnh Thu,Female,BIT-DD,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13419,Hồ Thanh Thủy Tiên,Female,ICT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13420,Đỗ Duy Toàn,Male,ICT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13422,Nguyễn Trung Toàn,Male,ATE,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13423,Trần Huy Toàn,Male,ATE,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13424,Nguyễn Ngọc Trâm,Female,CH-DD,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13426,Nguyễn Thu Trang,Female,ICT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13427,Phạm Vũ Phương Trang,Female,BIT,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
+22BI13428,Lê Quang Trí,Male,SST,ENTP,Phone call,Study supporter,"Calculus, Physics","Basketball, Football","Café, Library",Evening
