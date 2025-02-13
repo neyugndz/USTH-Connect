@@ -1,24 +1,23 @@
 package com.usth_connect.vpn_server_backend_usth.service;
 
-import com.usth_connect.vpn_server_backend_usth.entity.Notification;
 import com.usth_connect.vpn_server_backend_usth.entity.Organizer;
 import com.usth_connect.vpn_server_backend_usth.dto.EventDTO;
 import com.usth_connect.vpn_server_backend_usth.entity.MapLocation;
 import com.usth_connect.vpn_server_backend_usth.entity.schedule.Event;
+import com.usth_connect.vpn_server_backend_usth.entity.schedule.Schedule;
 import com.usth_connect.vpn_server_backend_usth.repository.EventRepository;
 import com.usth_connect.vpn_server_backend_usth.repository.MapLocationRepository;
 import com.usth_connect.vpn_server_backend_usth.repository.OrganizerRepository;
+import com.usth_connect.vpn_server_backend_usth.repository.ScheduleRepository;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.Array;
 import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.logging.Logger;
@@ -30,7 +29,7 @@ public class EventService {
     private EventRepository eventRepository;
 
     @Autowired
-    private OrganizerService organizerService;
+    private ScheduleRepository scheduleRepository;
 
     @Autowired
     private MapLocationRepository mapLocationRepository;
@@ -41,6 +40,51 @@ public class EventService {
     private static final Logger LOGGER = Logger.getLogger(EventService.class.getName());
     @Autowired
     private OrganizerRepository organizerRepository;
+    public void saveEvent(com.google.api.services.calendar.model.Event event) {
+        // Map the Google Calendar event to Event entity
+        Event eventEntity = new Event();
+        eventEntity.setEventName(event.getSummary());
+        eventEntity.setEventDescription(event.getDescription() != null ? event.getDescription() : "No description");
+
+        // Save the Google Event ID
+        eventEntity.setGoogleEventId(event.getId());
+
+        // Parse the start and end times with timezone offset
+        if (event.getStart().getDateTime() != null) {
+            OffsetDateTime startDateTime = OffsetDateTime.parse(event.getStart().getDateTime().toStringRfc3339(), DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+            eventEntity.setEventStart(startDateTime.toLocalDateTime());   // Convert to LocalDateTime if needed
+        }
+
+        if (event.getEnd().getDateTime() != null) {
+            OffsetDateTime endDateTime = OffsetDateTime.parse(event.getEnd().getDateTime().toStringRfc3339(), DateTimeFormatter.ISO_OFFSET_DATE_TIME);
+            eventEntity.setEventEnd(endDateTime.toLocalDateTime());  // Convert to LocalDateTime if needed
+        }
+
+        // Set the location field
+        if(event.getLocation() != null) {
+            String locationString = event.getLocation();
+            MapLocation mapLocation = mapLocationRepository.findByLocation(locationString)
+                    .orElseGet(() -> {
+                        MapLocation newlocation = new MapLocation();
+                        newlocation.setLocation(locationString);
+                        return mapLocationRepository.save(newlocation);
+                    });
+            eventEntity.setLocation(mapLocation);
+        }
+
+        // Create or find the organizer
+        Organizer organizer = new Organizer();
+        organizer.setEmail(event.getOrganizer().getEmail() != null ? event.getOrganizer().getEmail() : "Unknown");
+        organizer.setName(event.getOrganizer().getDisplayName() != null ? event.getOrganizer().getDisplayName() : "Unknown");
+
+        organizerRepository.save(organizer);
+        eventEntity.setOrganizer(organizer);
+
+        // Save the event to the database
+        eventRepository.save(eventEntity);
+
+        saveSchedule(eventEntity, eventEntity.getEventStart(), eventEntity.getEventEnd());
+    }
 
     /**
      * Save or update an event based on its Google Calendar ID.
@@ -80,6 +124,7 @@ public class EventService {
                 LOGGER.warning("Event start time is missing or null. Skipping update for start time.");
             }
 
+
             if (event.getEnd().getDateTime() != null) {
                 OffsetDateTime endDateTime = OffsetDateTime.parse(event.getEnd().getDateTime().toStringRfc3339(), DateTimeFormatter.ISO_OFFSET_DATE_TIME);
                 existingEvent.setEventEnd(endDateTime.toLocalDateTime());
@@ -87,27 +132,19 @@ public class EventService {
                 LOGGER.warning("Event end time is missing or null. Skipping update for end time.");
             }
 
-            // Update location, organizer
-            String locationString = event.getLocation();
-            LOGGER.info("Processing location: " + locationString);
 
-            // Set the locationValue in the event
-            existingEvent.setLocationValue(locationString);
+            // Update location, organizer, etc.
+            if (event.getLocation() != null) {
+                String locationString = event.getLocation();
+                MapLocation mapLocation = mapLocationRepository.findByLocation(locationString)
+                        .orElseGet(() -> {
+                            MapLocation newLocation = new MapLocation();
+                            newLocation.setLocation(locationString);
+                            return mapLocationRepository.save(newLocation);
+                        });
+                existingEvent.setLocation(mapLocation);
+            }
 
-            // Find the MapLocation by the location string (or create it if it doesn't exist)
-            MapLocation mapLocation = mapLocationRepository.findByLocation(locationString)
-                    .orElseGet(() -> {
-                        MapLocation newLocation = new MapLocation();
-                        newLocation.setLocation(locationString);
-                        newLocation.setLocationValue(locationString);
-                        return mapLocationRepository.save(newLocation);
-                    });
-
-            // Assign the MapLocation to the event
-            existingEvent.setLocation(mapLocation);
-            LOGGER.info("Location assigned: " + mapLocation.getLocation());
-
-//
             // Update organizer
             if (event.getOrganizer() != null && event.getOrganizer().getEmail() != null) {
                 Organizer organizer = organizerRepository.findByEmail(event.getOrganizer().getEmail())
@@ -149,24 +186,16 @@ public class EventService {
             }
 
             // Set location and organizer as above
-            String locationString = event.getLocation();
-            LOGGER.info("Processing location: " + locationString);
-
-            // Set the locationValue in the event
-            newEvent.setLocationValue(locationString);
-
-            // Find the MapLocation by the location string (or create it if it doesn't exist)
-            MapLocation mapLocation = mapLocationRepository.findByLocation(locationString)
-                    .orElseGet(() -> {
-                        MapLocation newLocation = new MapLocation();
-                        newLocation.setLocation(locationString);
-                        newLocation.setLocationValue(locationString);
-                        return mapLocationRepository.save(newLocation);
-                    });
-
-            // Assign the MapLocation to the event
-            newEvent.setLocation(mapLocation);
-            LOGGER.info("Location assigned: " + mapLocation.getLocation());
+            if (event.getLocation() != null) {
+                String locationString = event.getLocation();
+                MapLocation mapLocation = mapLocationRepository.findByLocation(locationString)
+                        .orElseGet(() -> {
+                            MapLocation newLocation = new MapLocation();
+                            newLocation.setLocation(locationString);
+                            return mapLocationRepository.save(newLocation);
+                        });
+                newEvent.setLocation(mapLocation);
+            }
 
             if (event.getOrganizer() != null && event.getOrganizer().getEmail() != null) {
                 Organizer organizer = organizerRepository.findByEmail(event.getOrganizer().getEmail())
@@ -183,7 +212,6 @@ public class EventService {
             eventRepository.save(newEvent);
         }
     }
-
 
     public List<EventDTO> getAllEvents() {
         return eventRepository.findAll().stream()
@@ -210,10 +238,13 @@ public class EventService {
         return dto;
     }
 
-    public List<Event> getEventsByOrganizer(String studyYear, String major) {
-        int organizerId = organizerService.calculateOrganizerId(studyYear, major);
+    public void saveSchedule(com.usth_connect.vpn_server_backend_usth.entity.schedule.Event event, LocalDateTime start, LocalDateTime end) {
+        Schedule schedule = new Schedule();
+        schedule.setModuleName(event.getEventName());
+        schedule.setStartTime(start.toLocalTime());
+        schedule.setEndTime(end.toLocalTime());
 
-        return eventRepository.findByOrganizerId(organizerId);
+        // Save the schedule
+        scheduleRepository.save(schedule);
     }
-
 }

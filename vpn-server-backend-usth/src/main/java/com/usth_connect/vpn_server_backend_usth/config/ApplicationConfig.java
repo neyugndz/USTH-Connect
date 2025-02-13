@@ -2,7 +2,6 @@ package com.usth_connect.vpn_server_backend_usth.config;
 
 import com.usth_connect.vpn_server_backend_usth.repository.StudentRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -19,8 +18,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @RequiredArgsConstructor
 public class ApplicationConfig {
 
-    @Autowired
-    private StudentRepository repository;
+    private final StudentRepository repository;
 
     @Bean
     public UserDetailsService userDetailsService() {

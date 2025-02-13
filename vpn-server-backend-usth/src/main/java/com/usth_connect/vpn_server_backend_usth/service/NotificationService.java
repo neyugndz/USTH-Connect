@@ -10,12 +10,8 @@ import java.util.Optional;
 
 @Service
 public class NotificationService {
-
     @Autowired
     private NotificationRepository notificationRepository;
-
-    @Autowired
-    private OrganizerService organizerService;
 
     public Notification saveNotification(Notification notification) {
         return notificationRepository.save(notification);
@@ -31,14 +27,5 @@ public class NotificationService {
 
     public void deleteNotification(String id) {
         notificationRepository.deleteById(id);
-    }
-
-    // New method to fetch notifications by organizerId
-    public List<Notification> getNotificationsByOrganizerDetails(String studyYear, String major) {
-        // Dynamically calculate the organizerId based on the studyYear and major
-        int organizerId = organizerService.calculateOrganizerId(studyYear, major);
-
-        // Fetch notifications based on the calculated organizerId
-        return notificationRepository.findByOrganizerId(organizerId);
     }
 }

@@ -38,14 +38,14 @@ public class GoogleCalendarService {
         return calendarService.events().list(calendarId)
                 .setTimeMin(timeMin)
                 .setTimeMax(timeMax)
-                .setMaxResults(500)
+                .setMaxResults(50)
                 .setSingleEvents(true)
                 .execute();
     }
 
-    public DateTime getStartOfMonth() {
+    public DateTime getStartOfWeek() {
         java.util.Calendar calendar = java.util.Calendar.getInstance();
-        calendar.set(java.util.Calendar.DAY_OF_MONTH, 1); // Set to the first day of the month
+        calendar.set(java.util.Calendar.DAY_OF_WEEK, java.util.Calendar.MONDAY);
         calendar.set(java.util.Calendar.HOUR_OF_DAY, 0);
         calendar.set(java.util.Calendar.MINUTE, 0);
         calendar.set(java.util.Calendar.SECOND, 0);
@@ -53,37 +53,17 @@ public class GoogleCalendarService {
         return new DateTime(calendar.getTime());
     }
 
-    public DateTime getEndOfMonth() {
+    public DateTime getEndOfWeek() {
         java.util.Calendar calendar = java.util.Calendar.getInstance();
-        calendar.set(java.util.Calendar.DAY_OF_MONTH, calendar.getActualMaximum(java.util.Calendar.DAY_OF_MONTH)); // Set to the last day of the month
+        calendar.set(java.util.Calendar.DAY_OF_WEEK, java.util.Calendar.SUNDAY);
+
+        if (calendar.get(java.util.Calendar.DAY_OF_WEEK) == java.util.Calendar.SUNDAY) {
+            calendar.add(java.util.Calendar.WEEK_OF_YEAR, 1);
+        }
         calendar.set(java.util.Calendar.HOUR_OF_DAY, 23);
         calendar.set(java.util.Calendar.MINUTE, 59);
         calendar.set(java.util.Calendar.SECOND, 59);
         calendar.set(java.util.Calendar.MILLISECOND, 999);
-        return new DateTime(calendar.getTime());
-    }
-
-    public DateTime getStartOfYear() {
-        java.util.Calendar calendar = java.util.Calendar.getInstance();
-        calendar.set(java.util.Calendar.MONTH, java.util.Calendar.JANUARY);
-        calendar.set(java.util.Calendar.DAY_OF_MONTH, 1);
-        calendar.set(java.util.Calendar.HOUR_OF_DAY, 0);
-        calendar.set(java.util.Calendar.MINUTE, 0);
-        calendar.set(java.util.Calendar.SECOND, 0);
-        calendar.set(java.util.Calendar.MILLISECOND, 0);
-
-        return new DateTime(calendar.getTime());
-    }
-
-    public DateTime getEndOfYear() {
-        java.util.Calendar calendar = java.util.Calendar.getInstance();
-        calendar.set(java.util.Calendar.MONTH, java.util.Calendar.DECEMBER);
-        calendar.set(java.util.Calendar.DAY_OF_MONTH, 31);
-        calendar.set(java.util.Calendar.HOUR_OF_DAY, 23);
-        calendar.set(java.util.Calendar.MINUTE, 59);
-        calendar.set(java.util.Calendar.SECOND, 59);
-        calendar.set(java.util.Calendar.MILLISECOND, 999);
-
         return new DateTime(calendar.getTime());
     }
 

@@ -1,13 +1,12 @@
 package com.usth_connect.vpn_server_backend_usth.entity.schedule;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.usth_connect.vpn_server_backend_usth.entity.Notification;
 import com.usth_connect.vpn_server_backend_usth.entity.Organizer;
 import com.usth_connect.vpn_server_backend_usth.entity.MapLocation;
+import com.usth_connect.vpn_server_backend_usth.entity.vpn.VpnEventSession;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "events")
@@ -16,10 +15,10 @@ public class Event {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer eventId;
 
-    @Column(name = "Event_Name",  columnDefinition = "TEXT")
+    @Column(name = "Event_Name")
     private String eventName;
 
-    @Column(name = "Event_Description",  columnDefinition = "TEXT")
+    @Column(name = "Event_Description")
     private String eventDescription;
 
     @Column(name = "Event_Start")
@@ -31,9 +30,6 @@ public class Event {
     @Column(name = "Google_Event_Id", unique = true)
     private String googleEventId;
 
-    @Column(name = "location_value")
-    private String locationValue;
-
     @ManyToOne
     @JoinColumn(name = "Location", referencedColumnName = "Location")
     @JsonIgnore
@@ -43,8 +39,11 @@ public class Event {
     @JoinColumn(name = "Organizer_ID", referencedColumnName = "id")
     private Organizer organizer;
 
-    @OneToMany(mappedBy = "event", cascade = CascadeType.ALL,fetch = FetchType.EAGER)
-    private Set<Notification> notifications;
+    @OneToMany(mappedBy = "event")
+    private List<EventNotification> eventNotifications;
+
+    @OneToMany(mappedBy = "event")
+    private List<VpnEventSession> vpnEventSessions;
 
     public Integer getEventId() {
         return eventId;
@@ -94,18 +93,6 @@ public class Event {
         this.googleEventId = googleEventId;
     }
 
-    public String getLocationValue() {
-        return locationValue;
-    }
-
-    public void setLocationValue(String locationValue) {
-        if (locationValue == null || locationValue.trim().isEmpty()) {
-            this.locationValue = "No Location Provided";
-        } else {
-            this.locationValue = locationValue.trim();
-        }
-    }
-
     public MapLocation getLocation() {
         return location;
     }
@@ -122,22 +109,19 @@ public class Event {
         this.organizer = organizer;
     }
 
-    public Set<Notification> getNotifications() {
-        return notifications;
+    public List<EventNotification> getEventNotifications() {
+        return eventNotifications;
     }
 
-    public void setNotifications(Set<Notification> notifications) {
-        this.notifications = notifications;
+    public void setEventNotifications(List<EventNotification> eventNotifications) {
+        this.eventNotifications = eventNotifications;
     }
 
-    // Add/remove helpers for the relationship
-    public void addNotification(Notification notification) {
-        this.notifications.add(notification);
-        notification.setEvent(this); // Maintain the relationship consistency
+    public List<VpnEventSession> getVpnEventSessions() {
+        return vpnEventSessions;
     }
 
-    public void removeNotification(Notification notification) {
-        this.notifications.remove(notification);
-        notification.setEvent(null); // Nullify the relationship
+    public void setVpnEventSessions(List<VpnEventSession> vpnEventSessions) {
+        this.vpnEventSessions = vpnEventSessions;
     }
 }

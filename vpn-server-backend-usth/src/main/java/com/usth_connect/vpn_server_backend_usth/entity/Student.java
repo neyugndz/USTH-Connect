@@ -1,11 +1,10 @@
 package com.usth_connect.vpn_server_backend_usth.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.usth_connect.vpn_server_backend_usth.Enum.Gender;
 import com.usth_connect.vpn_server_backend_usth.Enum.Role;
 import com.usth_connect.vpn_server_backend_usth.Enum.StudyYear;
-import com.usth_connect.vpn_server_backend_usth.entity.moodle.Course;
 import com.usth_connect.vpn_server_backend_usth.entity.studyBuddy.StudyBuddy;
+import com.usth_connect.vpn_server_backend_usth.entity.vpn.VpnSession;
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -21,7 +20,7 @@ public class Student implements UserDetails {
     @Id
     private String id;
 
-    @Column(name = "FullName")
+    @Column(name = "FullName", nullable = false)
     private String fullName;
 
     @Column(name = "Gender")
@@ -42,9 +41,13 @@ public class Student implements UserDetails {
     @Column(name = "Study_Year")
     private StudyYear studyYear;
 
-    // Refer to the student field in the StudyBuddy
-    @JsonManagedReference
-    @OneToOne(mappedBy = "student", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "student")
+    private List<Notification> notifications;
+
+    @OneToMany(mappedBy = "student")
+    private List<VpnSession> vpnSessions;
+
+    @OneToOne(mappedBy = "student")
     private StudyBuddy studyBuddy;
 
     @Column(name = "password")
@@ -52,19 +55,6 @@ public class Student implements UserDetails {
 
     @Enumerated(EnumType.STRING)
     private Role role;
-
-    @ManyToMany(mappedBy = "students")
-    private List<Course> courses;
-
-    @Column(name = "sip_username")
-    private String sipUsername;
-
-    @Column(name = "sip_password")
-    private String sipPassword;
-
-    @Column(name = "sip_domain")
-    private String sipDomain;
-
 
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(role.name()));
@@ -100,10 +90,6 @@ public class Student implements UserDetails {
 
     public void setMajor(String major) {
         this.major = major;
-        // Update the associated StudyBuddy entity
-        if (studyBuddy != null) {
-            studyBuddy.setMajor(major);
-        }
     }
 
     public Gender getGender() {
@@ -120,6 +106,22 @@ public class Student implements UserDetails {
 
     public void setFullName(String fullName) {
         this.fullName = fullName;
+    }
+
+    public List<Notification> getNotifications() {
+        return notifications;
+    }
+
+    public void setNotifications(List<Notification> notifications) {
+        this.notifications = notifications;
+    }
+
+    public List<VpnSession> getVpnSessions() {
+        return vpnSessions;
+    }
+
+    public void setVpnSessions(List<VpnSession> vpnSessions) {
+        this.vpnSessions = vpnSessions;
     }
 
     public StudyBuddy getStudyBuddy() {
@@ -185,37 +187,5 @@ public class Student implements UserDetails {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public List<Course> getCourses() {
-        return courses;
-    }
-
-    public void setCourses(List<Course> courses) {
-        this.courses = courses;
-    }
-
-    public String getSipUsername() {
-        return sipUsername;
-    }
-
-    public void setSipUsername(String sipUsername) {
-        this.sipUsername = sipUsername;
-    }
-
-    public String getSipPassword() {
-        return sipPassword;
-    }
-
-    public void setSipPassword(String sipPassword) {
-        this.sipPassword = sipPassword;
-    }
-
-    public String getSipDomain() {
-        return sipDomain;
-    }
-
-    public void setSipDomain(String sipDomain) {
-        this.sipDomain = sipDomain;
     }
 }

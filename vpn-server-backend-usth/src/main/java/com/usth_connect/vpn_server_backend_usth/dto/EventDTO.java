@@ -10,8 +10,7 @@ public class EventDTO {
     private String eventDescription;
     private LocalDateTime eventStart;
     private LocalDateTime eventEnd;
-    private MapLocation mapLocation;
-    private String locationValue;
+    private MapLocation location;
     private String organizer_email;
     private String organizer_name;
 
@@ -56,27 +55,11 @@ public class EventDTO {
     }
 
     public MapLocation getLocation() {
-        return mapLocation;
+        return location;
     }
 
     public void setLocation(MapLocation location) {
-        this.mapLocation = location;
-    }
-
-    public MapLocation getMapLocation() {
-        return mapLocation;
-    }
-
-    public void setMapLocation(MapLocation mapLocation) {
-        this.mapLocation = mapLocation;
-    }
-
-    public String getLocationValue() {
-        return locationValue;
-    }
-
-    public void setLocationValue(String locationValue) {
-        this.locationValue = locationValue;
+        this.location = location;
     }
 
     public String getOrganizer_email() {

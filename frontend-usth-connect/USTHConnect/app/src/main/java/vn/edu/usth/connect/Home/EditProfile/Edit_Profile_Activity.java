@@ -32,6 +32,7 @@ import vn.edu.usth.connect.MainActivity;
 import vn.edu.usth.connect.Models.Student;
 import vn.edu.usth.connect.Models.Dto.StudentDTO;
 import vn.edu.usth.connect.Network.RetrofitClient;
+import vn.edu.usth.connect.Network.SessionManager;
 import vn.edu.usth.connect.Network.StudentService;
 import vn.edu.usth.connect.R;
 
@@ -84,9 +85,8 @@ public class Edit_Profile_Activity extends AppCompatActivity {
     // Function to edit and update the student's profile
     private void updateStudentProfile() {
         // Get token from SharedPreferences
-        SharedPreferences sharedPreferences = getSharedPreferences("ToLogin", Context.MODE_PRIVATE);
-        String token = sharedPreferences.getString("Token", "");
-        String studentId = sharedPreferences.getString("StudentId", "");
+        String token = SessionManager.getInstance().getToken();
+        String studentId = SessionManager.getInstance().getStudentId();
 
         if (token.isEmpty() || studentId.isEmpty()) {
             Toast.makeText(this, "Invalid token or student ID", Toast.LENGTH_SHORT).show();
@@ -101,8 +101,13 @@ public class Edit_Profile_Activity extends AppCompatActivity {
 
         // Update and prepare the Student Body
         StudentDTO updatedStudent = new StudentDTO();
-        updatedStudent.setPassword(updatedPassword);
-        updatedStudent.setPhone(updatedPhone);
+        if (!updatedPassword.isEmpty()) {
+            updatedStudent.setPassword(updatedPassword);
+        }
+
+        if (!updatedPhone.isEmpty()) {  // Only set phone if it's not empty
+            updatedStudent.setPhone(updatedPhone);
+        }
 
         // Make the API call
         StudentService studentService = RetrofitClient.getInstance().create(StudentService.class);

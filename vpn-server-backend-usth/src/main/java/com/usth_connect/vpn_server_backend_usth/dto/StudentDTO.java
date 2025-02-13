@@ -9,23 +9,21 @@ import java.util.Date;
 public class StudentDTO {
     private String id;
     private String fullName;
-    private String password;
     private String email;
     private Date dob;
     private String major;
     private Gender gender;
-    private String phoneNumber;
+    private String phone;
     private StudyYear studyYear;
 
-    public StudentDTO(String id, String password, String fullName, String email, Date dob, String major, Gender gender, String phone, StudyYear studyYear) {
+    public StudentDTO(String id, String fullName, String email, Date dob, String major, Gender gender, String phone, StudyYear studyYear) {
         this.id = id;
         this.fullName = fullName;
-        this.password = password;
         this.email = email;
         this.dob = dob;
         this.major = major;
         this.gender = gender;
-        this.phoneNumber = phone;
+        this.phone = phone;
         this.studyYear = studyYear;
     }
 
@@ -35,14 +33,6 @@ public class StudentDTO {
 
     public void setId(String id) {
         this.id = id;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getFullName() {
@@ -85,12 +75,12 @@ public class StudentDTO {
         this.gender = gender;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public StudyYear getStudyYear() {

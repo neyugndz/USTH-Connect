@@ -1,6 +1,6 @@
 package com.usth_connect.vpn_server_backend_usth.entity;
 
-import com.usth_connect.vpn_server_backend_usth.entity.schedule.Event;
+import com.usth_connect.vpn_server_backend_usth.entity.schedule.EventNotification;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
@@ -12,10 +12,10 @@ public class Notification {
     private Integer notificationId;
 
     @ManyToOne
-    @JoinColumn(name = "event_id", referencedColumnName = "eventId")
-    private Event event;
+    @JoinColumn(name = "Student_ID", referencedColumnName = "ID")
+    private Student student;
 
-    @Column(name = "Message", columnDefinition = "TEXT")
+    @Column(name = "Message")
     private String message;
 
     @Column(name = "Created_At", nullable = false)
@@ -24,17 +24,8 @@ public class Notification {
     @Column(name = "Is_Read", nullable = false)
     private Boolean isRead = false;
 
-    @ManyToOne
-    @JoinColumn(name = "Organizer_ID", referencedColumnName = "id")
-    private Organizer organizer;
-
-    public Organizer getOrganizer() {
-        return organizer;
-    }
-
-    public void setOrganizer(Organizer organizer) {
-        this.organizer = organizer;
-    }
+    @OneToOne(mappedBy = "notification")
+    private EventNotification eventNotification;
 
     public Integer getNotificationId() {
         return notificationId;
@@ -44,12 +35,12 @@ public class Notification {
         this.notificationId = notificationId;
     }
 
-    public Event getEvent() {
-        return event;
+    public Student getStudent() {
+        return student;
     }
 
-    public void setEvent(Event event) {
-        this.event = event;
+    public void setStudent(Student student) {
+        this.student = student;
     }
 
     public String getMessage() {
@@ -76,4 +67,11 @@ public class Notification {
         isRead = read;
     }
 
+    public EventNotification getEventNotification() {
+        return eventNotification;
+    }
+
+    public void setEventNotification(EventNotification eventNotification) {
+        this.eventNotification = eventNotification;
+    }
 }
